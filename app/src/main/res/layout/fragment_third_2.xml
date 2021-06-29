@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/bg_top_header"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@drawable/ic_bg_topheader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        />
+
+    <ImageView
+        android:id="@+id/user_photo"
+        android:layout_width="71dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/grass"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textSize="20sp"
+        android:text="가치 봄"
+        android:id="@+id/user_name"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/mo_re"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/user_photo"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:textSize="16sp"
+        android:text="추천 도서"
+        android:id="@+id/user_id"
+        android:fontFamily="@font/mo_re"
+        android:textColor="#ffffff"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/user_photo"
+        app:layout_constraintTop_toTopOf="@id/user_name"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

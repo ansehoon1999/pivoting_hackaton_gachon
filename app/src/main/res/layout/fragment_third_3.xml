@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackGround">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:background="@color/colorBackGround"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:baselineAligned="false">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/grass" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="25dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textColor="@color/colorCategory"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:layout_marginTop="20dp"
+                android:text="프로필" />
+            <!--프로필 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/googleProfile"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/ic_launcher_foreground" />
+                <TextView
+                    android:id="@+id/googleEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="이메일" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textColor="@color/colorCategory"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:layout_marginTop="40dp"
+                android:text="사용자 정보" />
+
+            <Button
+                android:id="@+id/myHabit"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@color/colorBackGround"
+                android:textColor="@color/colorSmallTitle"
+                android:textAlignment="textStart"
+                android:stateListAnimator="@null"
+                android:text="내 읽기 습관 비교"/>
+            <!--구분선-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="1dp"
+                android:background="@color/colorHorizontal"/>
+
+            <Button
+                android:id="@+id/ourHabit"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@color/colorBackGround"
+                android:textColor="@color/colorSmallTitle"
+                android:textAlignment="textStart"
+                android:stateListAnimator="@null"
+                android:text="다른 사람과 읽기 습관 비교"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="1dp"
+                android:background="@color/colorHorizontal"/>
+
+            <Button
+                android:id="@+id/myBook"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@color/colorBackGround"
+                android:textColor="@color/colorSmallTitle"
+                android:textAlignment="textStart"
+                android:stateListAnimator="@null"
+                android:text="읽은 책 보기기"/>
+           <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="1dp"
+                android:background="@color/colorHorizontal"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textColor="@color/colorCategory"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:layout_marginTop="40dp"
+                android:text="고객지원" />
+
+            <Button
+                android:id="@+id/fragment_notice"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@color/colorBackGround"
+                android:textColor="@color/colorSmallTitle"
+                android:textAlignment="textStart"
+                android:stateListAnimator="@null"
+                android:text="공지사항"/>
+            <!--구분선-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="1dp"
+                android:background="@color/colorHorizontal"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="65dp"
+                    android:background="@color/colorBackGround"
+                    android:textColor="@color/colorSmallTitle"
+                    android:textAlignment="textStart"
+                    android:stateListAnimator="@null"
+                    android:enabled="false"
+                    android:text="버전정보"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="0dp"
+                    android:background="@color/colorBackGround"
+                    android:stateListAnimator="@null"
+                    android:text="1.0.0"
+                    android:enabled="false"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/colorHighlight" />
+            </LinearLayout>
+            <!--구분선-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="1dp"
+                android:background="@color/colorHorizontal"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@color/colorBackGround"
+                android:textColor="@color/colorSmallTitle"
+                android:textAlignment="textStart"
+                android:stateListAnimator="@null"
+                android:text="서비스 이용약관"/>
+            <!--구분선-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="1dp"
+                android:background="@color/colorHorizontal"/>
+            <Button
+                android:id="@+id/ClientFragment5_personal"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@color/colorBackGround"
+                android:textColor="@color/colorSmallTitle"
+                android:textAlignment="textStart"
+                android:stateListAnimator="@null"
+                android:text="개인정보 처리방침"/>
+            <!--구분선-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="1dp"
+                android:background="@color/colorHorizontal"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@color/colorBackGround"
+                android:textColor="@color/colorSmallTitle"
+                android:textAlignment="textStart"
+                android:stateListAnimator="@null"
+                android:text="위치정보 이용약관"/>
+            <!--구분선-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="1dp"
+                android:background="@color/colorHorizontal"/>
+            <Button
+                android:id="@+id/ClientFragment5_myInfo"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@color/colorBackGround"
+                android:textColor="@color/colorSmallTitle"
+                android:textAlignment="textStart"
+                android:stateListAnimator="@null"
+                android:text="앱 개발자 소개"/>
+            <!--구분선-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="1dp"
+                android:background="@color/colorHorizontal"/>
+            <Button
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="50dp"
+                android:background="@color/colorBackGround"
+                android:textColor="@color/colorSmallTitle"
+                android:textAlignment="textStart"
+                android:stateListAnimator="@null"
+                android:text="로그아웃"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="1dp"
+                android:background="@color/colorHorizontal"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA">
+
+    <View
+        android:id="@+id/bg_top_header"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@drawable/ic_bg_topheader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/user_photo"
+        android:layout_width="71dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/grass"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textSize="20sp"
+        android:text="가치 봄"
+        android:id="@+id/user_name"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/mo_re"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/user_photo"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:textSize="16sp"
+        android:text="당신의 책읽기 습관은?"
+        android:id="@+id/user_id"
+        android:fontFamily="@font/mo_re"
+        android:textColor="#ffffff"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/user_photo"
+        app:layout_constraintTop_toTopOf="@id/user_name"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/mo_re"
+        android:text="타인과 비교 분석"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/chart1"
+        app:layout_constraintEnd_toEndOf="@+id/bg_top_header"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bg_top_header"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+
+    <FrameLayout
+        android:id="@+id/chart1"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintBottom_toTopOf="@+id/chart2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bg_top_header"
+        app:layout_constraintVertical_bias="0.0"
+        >
+
+
+        <com.github.mikephil.charting.charts.RadarChart
+            android:id="@+id/main_chart1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.github.mikephil.charting.charts.RadarChart>
+    </FrameLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/mo_re"
+        android:text="과거의 나와 비교 분석"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/chart2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chart1" />
+
+    <FrameLayout
+        android:id="@+id/chart2"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/rounded_background"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.github.mikephil.charting.charts.RadarChart
+            android:id="@+id/main_chart2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        </com.github.mikephil.charting.charts.RadarChart>
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/renewButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.196" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

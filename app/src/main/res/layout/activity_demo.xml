@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+
+  <ViewFlipper
+      android:id="@+id/view_flipper"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+   <Button
+       android:id="@+id/tmp"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="임시"
+       android:layout_gravity="center"/>
+
+
+    <ImageView
+        android:id="@+id/first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:src="@drawable/common_full_open_on_phone"
+      android:layout_gravity="center"/>
+
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rounded_background"
+        android:layout_gravity="center"/>
+
+          <Button
+              android:id="@+id/out"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text=""
+              />
+      </LinearLayout>
+      <visual.camp.sample.view.GazePathView
+          android:id="@+id/gazePathView"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          tools:layout_editor_absoluteX="0dp"
+          tools:layout_editor_absoluteY="16dp">
+
+      </visual.camp.sample.view.GazePathView>
+
+  </ViewFlipper>
+
+
+
+  <Button
+      android:id="@+id/left_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="84dp"
+      android:text="뒤로가기"
+      android:onClick="previousView"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentStart="true"
+      android:layout_margin="16dp"/>
+
+
+
+
+    <Button
+        android:id="@+id/right_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="84dp"
+        android:text="앞으로 가기"
+        android:onClick="nextView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp" />
+
+</RelativeLayout>
