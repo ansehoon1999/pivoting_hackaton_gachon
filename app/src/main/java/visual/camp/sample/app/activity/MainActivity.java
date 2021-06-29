@@ -1,5 +1,5 @@
 package visual.camp.sample.app.activity;
-//규연이꺼
+
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
@@ -200,7 +200,7 @@ public class MainActivity<GazePathView> extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //수정
+        
         textureView=findViewById(R.id.preview);
 
         mMainImage = findViewById(R.id.main_image);
@@ -346,7 +346,7 @@ public class MainActivity<GazePathView> extends AppCompatActivity {
         checkPermission(); //카메라 권한 체크
         initHandler();
 
-        //수정
+        
         view.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -766,7 +766,7 @@ public class MainActivity<GazePathView> extends AppCompatActivity {
                             //view.showPrevious();
                             Log.i("GachNext"," Preview Page!! "+"  x : " + xx + "  y : " + yy + "   min_x = " + min_x + "   max_x = " + max_x + "   min_y = " + max_y + "   min_y = " + min_y);
 
-                            //수정
+                            
                             page--;
                             if(page == -1){
                                 page = 0;
