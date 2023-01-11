@@ -749,7 +749,7 @@ public class MainActivity<GazePathView> extends AppCompatActivity {
                             flip_timer = 0;
                             //역행률 (페이지에서 응시한 거리 / 페이지에 있는 줄 수 = 한 줄을 읽으면서 지나간 거리의 평균)
 
-                            double page_d = distance / page_line[page];
+                            double page_d = (distance / 2) / page_line[page];
                             goback = (goback + page_d);
                             Log.i("Gaze_coordinate","goback : " + goback);
 
@@ -777,7 +777,7 @@ public class MainActivity<GazePathView> extends AppCompatActivity {
 
                             flip_timer = 0;
                             //역행률 (페이지에서 응시한 거리 / 페이지에 있는 줄 수 = 한 줄을 읽으면서 지나간 거리의 평균)
-                            double page_d = distance / page_line[page];
+                            double page_d = (distance / 2 ) / page_line[page];
                             goback = (goback + page_d);
                             Log.i("Gaze_coordinate","goback : " + goback);
 
