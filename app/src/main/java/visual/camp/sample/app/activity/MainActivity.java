@@ -1432,11 +1432,7 @@ public class MainActivity<GazePathView> extends AppCompatActivity {
                 Log.i("checkWord","Name : "+ labels.get(i).getDescription() +"  max_x : "+ labels.get(i).getBoundingPoly().getVertices().get(1).getX() +
                         "  Min_x : " + labels.get(i).getBoundingPoly().getVertices().get(0).getX() +"  Min_y : "+ labels.get(i).getBoundingPoly().getVertices().get(1).getY()
                         +"  Max_y : "+ labels.get(i).getBoundingPoly().getVertices().get(2).getY());
-//                    word[i].setName(annotation.getDescription());
-//                    word[i].setMax_x(annotation.getBoundingPoly().getVertices().get(1).getX());
-//                    word[i].setMin_x(annotation.getBoundingPoly().getVertices().get(0).getX());
-//                    word[i].setMin_y(annotation.getBoundingPoly().getVertices().get(1).getY());
-//                    word[i].setMax_y(annotation.getBoundingPoly().getVertices().get(2).getY());
+
                 Word word_temp = new Word(labels.get(i).getDescription(), labels.get(i).getBoundingPoly().getVertices().get(1).getX(), labels.get(i).getBoundingPoly().getVertices().get(0).getX(),labels.get(i).getBoundingPoly().getVertices().get(1).getY(),labels.get(i).getBoundingPoly().getVertices().get(2).getY());
                 word[i-1] = word_temp;
             }
@@ -1452,17 +1448,7 @@ public class MainActivity<GazePathView> extends AppCompatActivity {
             @Override
             public void run() {
 
-//                    if(EyeState.equals("FIXATION") || EyeState.equals("SACCADE")){
-//                        a_start = System.currentTimeMillis();
-//                        try {
-//                            Thread.sleep(100);
-//                        } catch (InterruptedException e) {
-//                            e.printStackTrace();
-//                        }
-//                    } else {
-//                        a_end = System.currentTimeMillis();
-//                        a_total += (a_end - a_start) / 1000;
-//                    }
+
 
                 if (("FIXATION".equals(EyeState) || "SACCADE".equals(EyeState))) { // 시선이 책이 아닌 곳에 가있을 때
                     try {
@@ -1549,19 +1535,6 @@ class Word {
         this.max_x = max_x;
         this.min_y = min_y;
         this.max_y = max_y;
-    }
-
-    public void print(){
-//        System.out.println("name: " + name);
-//        System.out.println("min_x: " + min_x);
-//        System.out.println("max_x: " + max_x);
-//        System.out.println("min_y: " + min_y);
-//        System.out.println("max_y: " + max_y);
-        Log.i("WordPrint","name: " + name);
-        Log.i("WordPrint","min_x: " + min_x);
-        Log.i("WordPrint","max_x: " + max_x);
-        Log.i("WordPrint","min_y: " + min_y);
-        Log.i("WordPrint","max_y: " + max_y);
     }
 
     public void setName(String name){
