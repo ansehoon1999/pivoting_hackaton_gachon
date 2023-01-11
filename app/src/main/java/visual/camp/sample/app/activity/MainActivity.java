@@ -1176,7 +1176,7 @@ public class MainActivity<GazePathView> extends AppCompatActivity {
             double one = 1 - div;
             double hundred = one * 100;
 
-            concentration = (100*u_total)/total;
+            concentration = hundred;
             Log.i(TAG, "Concentration result: " + concentration +"%");
 
             Read_Speed();
