@@ -604,7 +604,7 @@ public class MainActivity<GazePathView> extends AppCompatActivity {
 
                             bundle.putLong("concentration", concentration);
                             bundle.putDouble("read speed", read_speed);
-                            bundle.putDouble("reverse rate", goback);
+                            bundle.putDouble("reverse rate", goback/5);
                             intent.putExtras(bundle);
 
                             startActivity(intent);
@@ -748,15 +748,11 @@ public class MainActivity<GazePathView> extends AppCompatActivity {
 
                             flip_timer = 0;
                             //역행률 (페이지에서 응시한 거리 / 페이지에 있는 줄 수 = 한 줄을 읽으면서 지나간 거리의 평균)
-                            if(goback == 0){
-                                goback = distance/20;
-                                distance = 0;
-                                Log.i("Gaze_coordinate","goback : " + goback);
-                            }else{
-                                double page_d = distance / page_line[page];
-                                goback = (goback + page_d)/20;
-                                Log.i("Gaze_coordinate","goback : " + goback);
-                            }
+
+                            double page_d = distance / page_line[page];
+                            goback = (goback + page_d);
+                            Log.i("Gaze_coordinate","goback : " + goback);
+
 
                         }
                     } else if (xx > 0 && yy > 0 && x < (deviceWidth / 2)*0.9) {
@@ -781,15 +777,10 @@ public class MainActivity<GazePathView> extends AppCompatActivity {
 
                             flip_timer = 0;
                             //역행률 (페이지에서 응시한 거리 / 페이지에 있는 줄 수 = 한 줄을 읽으면서 지나간 거리의 평균)
-                            if(goback == 0){
-                                goback = distance;
-                                distance = 0;
-                                Log.i("Gaze_coordinate","goback : " + goback);
-                            }else{
-                                double page_d = distance / page_line[page];
-                                goback = (goback + page_d)/2;
-                                Log.i("Gaze_coordinate","goback : " + goback);
-                            }
+                            double page_d = distance / page_line[page];
+                            goback = (goback + page_d);
+                            Log.i("Gaze_coordinate","goback : " + goback);
+
                         }
                     }
                     else{
